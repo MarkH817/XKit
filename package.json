@@ -34,6 +34,13 @@
     "dev": "webextension-toolbox dev chrome",
     "test": "standard && tsc && jest --coverage"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": [
+        "lint-staged"
+      ]
+    }
+  },
   "lint-staged": {
     "*.js": [
       "prettier --write",
