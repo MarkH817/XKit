@@ -1,7 +1,9 @@
 # Do not commit this
 
 # Only ignore build/ in project root
-/build
+build
+dist
+packages
 
 .DS_Store
 
