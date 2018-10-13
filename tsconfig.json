@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": false,
+    "checkJs": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "target": "es2015"
+  },
+  "include": [
+    "declarations.d.ts",
+    "app/**/*.js"
+  ],
+  "exclude": ["Extensions/**/*.icon.js"]
+}

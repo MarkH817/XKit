@@ -32,10 +32,52 @@
   "scripts": {
     "build": "webextension-toolbox build chrome",
     "dev": "webextension-toolbox dev chrome",
-    "test": "standard"
+    "test": "standard && tsc && jest --coverage"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "standard --fix",
+      "git add"
+    ],
+    "*.{md,less,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "standard": {
+    "globals": [
+      "browser",
+      "afterAll",
+      "afterEach",
+      "beforeAll",
+      "beforeEach",
+      "describe",
+      "expect",
+      "jest",
+      "test"
+    ],
+    "ignore": [
+      "editor.js",
+      "xkit.js",
+      "dev/",
+      "Extensions/",
+      "Safari/",
+      "WebExtension/"
+    ]
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@types/firefox-webext-browser": "^63.0.1",
+    "@types/jest": "^23.3.5",
     "@types/node": "^10.11.7",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "coveralls": "^3.0.2",
     "husky": "^1.1.2",
