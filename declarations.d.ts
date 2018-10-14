@@ -1,12 +1,11 @@
 interface ExtensionInfo {
-  id: string
+  name: string
   version: string
-  title: string
-  developer: string
   description: string
-  details: string
+  shortDescription?: string
+  developer: string
 
-  frame: boolean
+  frame?: boolean
   beta?: boolean
   slow?: boolean
 }

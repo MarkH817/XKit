@@ -1,5 +1,14 @@
-export class XKit {
-  init () {}
+import { Bubblr } from '../extensions'
 
-  shutdown () {}
+export class XKit {
+  init() {
+    this._bubble = new Bubblr()
+
+    this._bubble.init()
+    this._bubble.run()
+  }
+
+  shutdown() {
+    this._bubble.destroy()
+  }
 }
