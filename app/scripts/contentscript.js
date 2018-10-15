@@ -10,7 +10,7 @@ window.requestAnimationFrame(() => {
 // Shutdown after a while
 setTimeout(() => {
   window.requestAnimationFrame(() => {
-    console.log('[Neon XKit] Shutting down.')
-    xkit.shutdown()
+    console.log('[Neon XKit] Running')
+    xkit.run()
   })
-}, 10000)
+}, 100)

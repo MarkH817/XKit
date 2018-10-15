@@ -47,16 +47,3 @@ export class Extension {
     // noop
   }
 }
-
-/** @type {ExtensionInfo} */
-export const baseExtensionInfo = {
-  name: 'Extension',
-  version: '0.0.0',
-  description: '',
-  shortDescription: '',
-  developer: 'anonymous',
-
-  frame: false,
-  beta: false,
-  slow: false
-}

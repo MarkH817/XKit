@@ -1,14 +1,19 @@
-import { Bubblr } from '../extensions'
+import { Manager } from './manager'
 
 export class XKit {
-  init() {
-    this._bubble = new Bubblr()
+  constructor() {
+    this.manager = new Manager()
+  }
 
-    this._bubble.init()
-    this._bubble.run()
+  init() {
+    this.manager.init()
+  }
+
+  run() {
+    this.manager.listExtensions()
   }
 
   shutdown() {
-    this._bubble.destroy()
+    this.manager.destroy()
   }
 }
