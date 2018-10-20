@@ -1,0 +1,11 @@
+{
+  "*.js": [
+    "prettier --write",
+    "standard --fix",
+    "git add"
+  ],
+  "*.{md,less,css}": [
+    "prettier --write",
+    "git add"
+  ]
+}
